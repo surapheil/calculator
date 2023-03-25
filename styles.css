@@ -1,24 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Courier New", Courier, monospace;
+  }
 
-.container{
-    display:grid;
-    grid-template-columns: 100px 100px 100px 100px;
-    grid-template-rows: 60px;
-    grid-auto-rows: 40px;
-    text-align: center;
-    row-gap: 6px;
-    column-gap: 10px;
+  body {
+    display: flex;
+    height: 100vh;
+    align-items: center;
     justify-content: center;
-    align-content: center;
+    background-color: #fff;
+  }
 
-}
+ .container{
+    width: 275px;
+    margin: auto;
+    min-height: 400px;
+    box-shadow: 0 8px 50px -7px black ;
+ }
 
-.display{
-    display: grid;
-    grid-column-start: 1;
-    grid-column-end: 5;
-    border:1px solid blue;
-    border-radius: 3px;
-    
-    
-    
-}
+ .cal-displayer{
+    padding: 1.3rem;
+    background-color: #303030;
+ }
+
+ .expression{
+    font-size: 1.3rem;
+    text-align: right;
+    color: #727B86;
+    padding-bottom: 0.5rem;
+ }
+
+ .display {
+    font-size: 2rem;
+    text-align: right;
+    color: #fff;
+
+ }
+
+ .cal-buttons{
+    display: table;
+ }
+
+ .cal-buttons button{
+    display: table-cell;
+    width: 25%;
+    background: #425062;
+    color: #fff;
+    height: 65px;
+    font-size: 1.3rem;
+    border: none;
+    border-color: #3C4857;
+    border-width: 1px 1px 0px 0;
+    border-style: solid;
+ }
+
+ .cal-buttons button.operator{
+    color: #ffbc56;
+ }
+
+ .cal-buttons button.op{
+    color: #ff7665;
+ }
+
+
+ .cal-buttons button:nth-child(4n){
+    border-right: none;
+ }
+
+ .cal-buttons button:active{
+    position: relative;
+    top: 1px;
+
+ }
+
+ .cal-buttons button:hover{
+    background-color: #3e4b5c;
+ }
